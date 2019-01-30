@@ -5,10 +5,6 @@ import { Count } from './organs'
 
 export const Home = (): any => (_state: any, _actions: any) => (
   <div key="home">
-    <Helmet key="home-helmet">
-      <title>Home</title>
-      <meta name="description" content="Home Page" />
-    </Helmet>
     <h1>Home</h1>
     <Count />
     <div>
