@@ -1,9 +1,9 @@
 import { h } from 'hyperapp'
 import { Link } from '@hyperapp/router'
 import { Helmet } from 'hyperapp-helmet'
-import { Count } from './organs'
+import { Count } from '../components/Count'
 
-export const About = (): any => (_state: any, _actions: any) => (
+export const About = (): any => (state: any, actions: any) => (
   <div key="about">
     <h1>About</h1>
     <Count />

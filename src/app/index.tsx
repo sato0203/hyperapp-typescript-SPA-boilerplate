@@ -1,15 +1,13 @@
 import { h, View } from 'hyperapp'
 import { Switch, Route } from '@hyperapp/router'
-import { Home, About } from './containers'
-import { Counter, Locator } from './modules'
+import { Home, About } from './views'
+import _states from "./states"
+import _actions from "./actions"
 
-export namespace App {
-  export type State = Counter.State & Locator.State
-  export type Actions = Counter.Actions & Locator.Actions
-
-  export const state = { ...Counter.state, ...Locator.state }
-  export const actions = { ...Counter.actions, ...Locator.actions }
-  export const view: View<State, Actions> = () => (
+export default {
+  state : _states,
+  actions : _actions,
+  view : (states:typeof _states, actions:typeof _actions) => (
     <Switch>
       <Route path="/" render={Home} />
       <Route path="/about" render={About} />

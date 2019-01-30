@@ -1,7 +1,7 @@
 import { app } from 'hyperapp'
 import { location } from '@hyperapp/router'
 
-import { App } from './app'
+import App from './app'
 
 const main = app(
     App.state, 
@@ -10,3 +10,5 @@ const main = app(
     document.getElementById('app')
 )
 const unsubscribe = location.subscribe(main.location)
+
+console.log("hello")
